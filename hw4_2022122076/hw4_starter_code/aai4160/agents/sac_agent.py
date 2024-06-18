@@ -323,8 +323,9 @@ class SoftActorCritic(nn.Module):
             loss, entropy = 0., self.entropy(self.actor(obs)).mean()
     
         # Add entropy if necessary
+        # this should be extracted, since loss is -E(Q)+E(log(a|s)) and entropy is -E(log(a|s))
         if self.use_entropy_bonus:
-            loss += self.temperature * entropy
+            loss -= self.temperature * entropy
 
         self.actor_optimizer.zero_grad()
         loss.backward()
