@@ -1,0 +1,6 @@
+gymnasium[classic_control,box2d,atari,accept-rom-license]==0.29.1
+tensorboard==2.10.0
+tensorboardX==2.5.1
+torch
+opencv-python
+pyyaml
