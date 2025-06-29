@@ -1,0 +1,9 @@
+gymnasium[classic_control,mujoco,atari,accept-rom-license]
+matplotlib
+torch
+opencv-python
+pyyaml
+ipython
+moviepy
+ipdb
+tqdm
